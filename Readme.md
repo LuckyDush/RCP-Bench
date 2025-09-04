@@ -79,6 +79,7 @@ Once the original datasets are prepared, you can generate the **corrupted datase
 python corrupdataset/dataset.py \
   --root_dir ./data/shihang/RCPBench/test \
   --save_root ./data/shihang/corruptest
+```
 After processing, the directory structure will look like this:
 
 bash
@@ -151,33 +152,32 @@ Our installation environment follows CoAlign(https://udtkdfu8mk.feishu.cn/docx/L
  and HEAL(https://github.com/yifanlu0227/HEAL/tree/main).
 
 Step 1: Basic Installation
-bash
-
+```bash
 conda create -n rcpbench python=3.8
-conda activate rcpbench
+conda activate rcpbench```
 
 # install pytorch
-conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge
+```conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge```
 
 # install dependencies (add matplotlib + imagecorruptions for corruption dataset generation)
-pip install -r requirements.txt 
+```pip install -r requirements.txt ```
 
 # install this project (OK if EasyInstallDeprecationWarning shows up)
-python setup.py develop
+```python setup.py develop```
 
 Step 2: Install Spconv (1.2.1 or 2.x)
 Check the table to match your CUDA version. Example for CUDA 11.6:
-bash
-pip install spconv-cu116
+```bash
+pip install spconv-cu116```
 
 Step 3: Compile Bbx IoU (CUDA version)
-bash
-python opencood/utils/setup.py build_ext --inplace
+```bash
+python opencood/utils/setup.py build_ext --inplace```
 
 Step 4: Dependencies for FPV-RCNN (optional)
-bash
+```bash
 cd main
-python opencood/pcdet_utils/setup.py build_ext --inplace
+python opencood/pcdet_utils/setup.py build_ext --inplace```
 ---
 
 ### 🏋️ Training
@@ -187,7 +187,7 @@ Models trained with the HEAL framework can be directly evaluated in RCP-Bench.
 
 bash
 
-python opencood/tools/train.py -y ${CONFIG_FILE} [--model_dir ${CHECKPOINT_FOLDER}]
+```python opencood/tools/train.py -y ${CONFIG_FILE} [--model_dir ${CHECKPOINT_FOLDER}]```
 -y: Path to YAML config (e.g. opencood/hypes_yaml/opv2v/LiDAROnly/lidar_fcooper.yaml)
 
 --model_dir (optional): Path to checkpoint folder
@@ -210,20 +210,17 @@ For DAIR-V2X: Modify paths at line 160 & 169 in dairv2x_basedataset.py
 
 Example:
 
-python
-
 corcamera_dir = os.path.join("/your/path/to/corruptest/", str(type), str(level))
 Run Evaluation
 Single corruption:
 
-bash
+```bash
+python opencood/tools/inference.py --model_dir ${CHECKPOINT_FOLDER} [--fusion_method intermediate]```
 
-python opencood/tools/inference.py --model_dir ${CHECKPOINT_FOLDER} [--fusion_method intermediate]
 All corruptions:
 
-bash
-
-python rcpbench/main/opencood/tools/testcor.py
+```bash
+python rcpbench/main/opencood/tools/testcor.py```
 🧪 Testing Ego vs. CAV Interference
 Modify dataset loader:
 
