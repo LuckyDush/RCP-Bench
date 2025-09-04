@@ -252,5 +252,12 @@ Special thanks to [HEAL](https://github.com/yifanlu0227/HEAL/tree/main) for prov
 ## 📖 Citation
 
 If you find this repository useful, please cite:
-@inproceedings{du2025rcp, title={RCP-Bench: Benchmarking Robustness for Collaborative Perception Under Diverse Corruptions}, author={Du, Shihang and Qu, Sanqing and Wang, Tianhang and Zhang, Xudong and Zhu, Yunwei and Mao, Jian and Lu, Fan and Lin, Qiao and Chen, Guang}, booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference}, pages={11908--11918}, year={2025} }
+```bibtex
+@inproceedings{du2025rcp,
+  title={RCP-Bench: Benchmarking Robustness for Collaborative Perception Under Diverse Corruptions},
+  author={Du, Shihang and Qu, Sanqing and Wang, Tianhang and Zhang, Xudong and Zhu, Yunwei and Mao, Jian and Lu, Fan and Lin, Qiao and Chen, Guang},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={11908--11918},
+  year={2025}
+}
 ```
