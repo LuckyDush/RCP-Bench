@@ -88,46 +88,64 @@ After processing, the directory structure will look like this:
 ├── OPV2V
 │   ├── additional
 │   ├── validate
-│   ├── train
+│   │── train
 │   ├── test
 │   └── corruptest
-│       ├── brightness
-│       │   └── 1 ... 5
-│       ├── camera_crash
-│       │   └── 1 ... 5
-│       ├── color_quant
-│       ├── defocus_blur
-│       ├── fog
-│       ├── frost
-│       ├── gaussian_noise
-│       ├── impulse_noise
-│       ├── low_light
-│       ├── shot_noise
-│       ├── snow
+│       └── brightness
+│           └── 1
+│           └── 2
+│           └── 3
+│           └── 4
+│           └── 5
+│       └── camera_crash
+│           └── 1
+│           └── 2
+│           └── 3
+│           └── 4
+│           └── 5
+│       └── color_quant
+│       └── defocus_blur
+│       └── fog
+│       └── frost
+│       └── gaussian_noise
+│       └── impulse_noise
+│       └── low_light
+│       └── shot_noise
+│       └── snow
 │       └── zoom_blur
 ├── V2XSET
-│   ├── train
-│   ├── validate
 │   ├── test
+│   ├── train
+│   └── validate
 │   └── corruptest
-└── DAIR-V2X
+└── Dair-V2X
     ├── vehicle-side
     ├── infrastructure-side
-    ├── cooperative
+    └── cooperative
     └── corruptest
-        ├── brightness
-        │   └── 1 ... 5
-        ├── camera_crash
-        │   └── 1 ... 5
-        ├── color_quant
-        ├── defocus_blur
-        ├── fog
-        ├── frost
-        ├── gaussian_noise
-        ├── impulse_noise
-        ├── low_light
-        ├── shot_noise
-        ├── snow
+        └── brightness
+            └── 1
+                └── vehicle-side
+                └── infrastructure-side
+            └── 2
+            └── 3
+            └── 4
+            └── 5
+        └── camera_crash
+            └── 1
+            └── 2
+            └── 3
+            └── 4
+            └── 5
+        └── color_quant
+        └── defocus_blur
+        └── fog
+        └── frost
+        └── gaussian_noise
+        └── impulse_noise
+        └── low_light
+        └── shot_noise
+        └── snow
         └── zoom_blur
 ```
 
