@@ -217,7 +217,7 @@ After generating the corrupted datasets, update the corresponding dataset loader
 
 ⚠️ Make sure the modified paths are consistent with the location where you generated the corrupted datasets (e.g., `--save_root ./data/shihang/corruptest`).
 
-### Run Evaluation
+### Run Global Interference Evaluation
 - Test a model on a specific corruption type and severity on **Global Interference**:
 ```bash
 python opencood/tools/inference.py --model_dir ${CHECKPOINT_FOLDER} [--fusion_method intermediate]
