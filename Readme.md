@@ -144,14 +144,14 @@ After processing, the directory structure will look like this:
         └── shot_noise
         └── snow
         └── zoom_blur
----
+---```
 ##⚙️ Installation
 
 Our installation environment follows CoAlign(https://udtkdfu8mk.feishu.cn/docx/LlMpdu3pNoCS94xxhjMcOWIynie)
  and HEAL(https://github.com/yifanlu0227/HEAL/tree/main).
 
 ### Step 1: Basic Installation
-```bash
+bash
 conda create -n rcpbench python=3.8
 conda activate rcpbench
 # install pytorch. 
