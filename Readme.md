@@ -82,7 +82,6 @@ python corrupdataset/dataset.py \
 After processing, the directory structure will look like this:
 
 bash
-
 . 
 ├── OPV2V
 │   ├── additional
@@ -147,7 +146,7 @@ bash
         └── snow
         └── zoom_blur
 ---
-⚙️ Installation
+### ⚙️ Installation
 Our installation environment follows CoAlign(https://udtkdfu8mk.feishu.cn/docx/LlMpdu3pNoCS94xxhjMcOWIynie)
  and HEAL(https://github.com/yifanlu0227/HEAL/tree/main).
 
@@ -165,23 +164,23 @@ pip install -r requirements.txt
 
 # install this project (OK if EasyInstallDeprecationWarning shows up)
 python setup.py develop
+
 Step 2: Install Spconv (1.2.1 or 2.x)
 Check the table to match your CUDA version. Example for CUDA 11.6:
-
 bash
-
 pip install spconv-cu116
+
 Step 3: Compile Bbx IoU (CUDA version)
 bash
-
 python opencood/utils/setup.py build_ext --inplace
+
 Step 4: Dependencies for FPV-RCNN (optional)
 bash
+cd main
+python opencood/pcdet_utils/setup.py build_ext --inplace
 ---
 
-cd RCPBench
-python opencood/pcdet_utils/setup.py build_ext --inplace
-🏋️ Training
+### 🏋️ Training
 Training Data
 We do not use RCP-Bench corrupted datasets for training — only clean OPV2V, V2XSet, and DAIR-V2X.
 Models trained with the HEAL framework can be directly evaluated in RCP-Bench.
@@ -199,7 +198,9 @@ RCP-Drop: Configure dropout strategy in intermediate_heter_fusion_dataset.py (li
 
 RCP-Mix: Change core_method in YAML config from heter_model_baseline to rcp_mix
 
-🔬 Evaluation
+---
+
+### 🔬 Evaluation
 🔧 Configure Dataset Paths
 Update dataset loaders to point to your corruptest directory.
 
@@ -230,9 +231,13 @@ Ego Interference: Comment out lines 281–282, enable 284–285
 
 CAV Interference: Comment out lines 275–276, enable 278–279
 
-🙏 Acknowledgements
+---
+
+### 🙏 Acknowledgements
 Special thanks to HEAL for providing the base framework.
 
-📖 Citation
+---
+
+### 📖 Citation
 If you find this repository useful, please cite:
 @inproceedings{du2025rcp, title={RCP-Bench: Benchmarking Robustness for Collaborative Perception Under Diverse Corruptions}, author={Du, Shihang and Qu, Sanqing and Wang, Tianhang and Zhang, Xudong and Zhu, Yunwei and Mao, Jian and Lu, Fan and Lin, Qiao and Chen, Guang}, booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference}, pages={11908--11918}, year={2025} }
