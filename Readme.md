@@ -68,10 +68,6 @@ To get started, you first need to download the original datasets: **OPV2V**, **V
 - **V2XSet**: Please refer to the [V2X-ViT repo](https://github.com/DerrickXuNu/v2x-vit)  
 
 - **DAIR-V2X**: Download the dataset from the [official page](https://thudair.baai.ac.cn/index)  
-  We use the complemented annotation version, so please also follow the instructions provided [here](https://siheng-chen.github.io/dataset/dair-v2x-c-complemented/)  
-
-👉 You may choose to download only the datasets that interest you. However, since **OPV2V** and **DAIR-V2X** are heavily used in this repo, we recommend starting with these two.
-
 ---
 
 ### 📦 Create the RCP-Bench Dataset
@@ -150,8 +146,10 @@ bash
         └── shot_noise
         └── snow
         └── zoom_blur
+---
 ⚙️ Installation
-Our installation environment follows CoAlign and HEAL.
+Our installation environment follows CoAlign(https://udtkdfu8mk.feishu.cn/docx/LlMpdu3pNoCS94xxhjMcOWIynie)
+ and HEAL(https://github.com/yifanlu0227/HEAL/tree/main).
 
 Step 1: Basic Installation
 bash
@@ -179,6 +177,7 @@ bash
 python opencood/utils/setup.py build_ext --inplace
 Step 4: Dependencies for FPV-RCNN (optional)
 bash
+---
 
 cd RCPBench
 python opencood/pcdet_utils/setup.py build_ext --inplace
